@@ -74,6 +74,10 @@ export default function NoteCard(props) {
 
   useEffect(() => {
     getNotes();
+  }, [userNotes]);
+
+  useEffect(() => {
+    getNotes();
     setNewNoteCreated(false);
   }, [newNoteCreated]);
 
