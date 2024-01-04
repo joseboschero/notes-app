@@ -1,0 +1,24 @@
+# Node.js
+node_modules/
+
+# Sequelize
+config/config.json
+config/config.js
+migrations/
+seeders/
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
+
+# IDE (por ejemplo, VSCode)
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
