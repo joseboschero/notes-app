@@ -129,7 +129,6 @@ export default function NoteEditModal(props) {
       categories: updatedCategories,
     };
 
-    console.log(editedNote);
     await noteService.deleteNoteCategory(id, editedNote, token);
 
     removeStoreCategory(categoryToDelete);

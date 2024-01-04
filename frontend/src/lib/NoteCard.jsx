@@ -51,7 +51,7 @@ export default function NoteCard(props) {
 
     getNotes();
 
-    navigate("/notes");
+    setStoreNoteDeleted(true);
   };
 
   const archiveNote = async (id) => {

@@ -15,6 +15,8 @@ export default function NotesHolder() {
     setStoreEditedNote,
     storeRadioValue,
     storeFilteredNotes,
+    storeNoteDeleted,
+    setStoreNoteDeleted,
   } = useStore();
 
   const [userNotes, setUserNotes] = useState();
@@ -45,6 +47,11 @@ export default function NotesHolder() {
     getNotes();
     setStoreEditedNote(false);
   }, [storeEditedNote]);
+
+  useEffect(() => {
+    getNotes();
+    setStoreNoteDeleted(false);
+  }, [storeNoteDeleted]);
 
   const notesHasElements = userNotes && Object.keys(userNotes).length > 0;
 
