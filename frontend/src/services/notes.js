@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "http://localhost:3001/notes";
+const baseUrl = "https://notes-app-backend-tmv2.onrender.com/notes";
 
 const getAllNotes = async (token) => {
   const config = {
