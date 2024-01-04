@@ -1,24 +1,14 @@
 {
-  "version": 2,
   "builds": [
     {
-      "src": "index.js",
-      "use": "@now/node"
+      "src": "./index.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      
-      "dest": "app.js"
-    },
-    {
-      "src": "/notes/(.*)", 
-      "dest": "app.js"
-    },
-    {
-      "src": "/users/(.*)", 
-      "dest": "app.js"
+      "dest": "/"
     }
   ]
 }
