@@ -8,9 +8,16 @@
   ],
   "routes": [
     {
-      
       "src": "/(.*)",
       
+      "dest": "app.js"
+    },
+    {
+      "src": "/notes/(.*)", 
+      "dest": "app.js"
+    },
+    {
+      "src": "/users/(.*)", 
       "dest": "app.js"
     }
   ]
