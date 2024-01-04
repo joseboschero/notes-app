@@ -2,6 +2,8 @@ import express from "express";
 
 import cors from "cors";
 
+import { sequelize } from "./database/database.js";
+
 import userRoutes from "./routes/userRoutes.js";
 import noteRoutes from "./routes/noteRoutes.js";
 
