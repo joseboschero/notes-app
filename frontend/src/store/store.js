@@ -10,6 +10,9 @@ export const useStore = create(
       newNoteCreated: false,
       setNewNoteCreated: (newValue) => set({ newNoteCreated: newValue }),
 
+      storeNoteDeleted: false,
+      setStoreNoteDeleted: (newValue) => set({ storeNoteDeleted: newValue }),
+
       storeEditedNote: false,
       setStoreEditedNote: (newValue) => set({ storeEditedNote: newValue }),
 

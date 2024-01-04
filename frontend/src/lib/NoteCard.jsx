@@ -28,6 +28,8 @@ export default function NoteCard(props) {
     setNewNoteCreated,
     storeEditedNote,
     setStoreEditedNote,
+    setStoreNoteDeleted,
+    storeNoteDeleted,
   } = useStore();
 
   const [userNotes, setUserNotes] = useState();
@@ -40,6 +42,8 @@ export default function NoteCard(props) {
 
   const deleteNote = async (id, token) => {
     await notesService.deleteNote(id, token);
+
+    setStoreNoteDeleted(true);
 
     getNotes();
   };
@@ -74,7 +78,7 @@ export default function NoteCard(props) {
 
   useEffect(() => {
     getNotes();
-  }, [userNotes]);
+  }, [storeNoteDeleted]);
 
   useEffect(() => {
     getNotes();
