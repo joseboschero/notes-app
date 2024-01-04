@@ -7,6 +7,20 @@ async function main() {
 
     const PORT = process.env.PORT || 3001;
 
+    app.get("/", (req, res) => {
+      const htmlResponse = `
+        <html>
+          <head>
+            <title>Notes app backend</title>
+          </head>
+          <body>
+            <h1>Notes app backend</h1>
+          </body>
+        </html>
+      `;
+      res.send(htmlResponse);
+    });
+
     app.listen(PORT);
 
     console.log("Server listening on port ", PORT);
