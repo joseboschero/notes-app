@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const loginBaseUrl = "http://localhost:3001/users/login";
+const loginBaseUrl = "https://notes-app-backend-tmv2.onrender.com/users/login";
 
 const login = async (credentials) => {
   const { data } = await axios.post(loginBaseUrl, credentials);
