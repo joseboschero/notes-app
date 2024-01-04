@@ -21,6 +21,8 @@ import notesService from "../services/notes";
 
 import useStore from "../store/store";
 
+import { useNavigate } from "react-router-dom";
+
 export default function NoteCard(props) {
   const {
     loggedUserToken,
@@ -31,6 +33,8 @@ export default function NoteCard(props) {
     setStoreNoteDeleted,
     storeNoteDeleted,
   } = useStore();
+
+  const navigate = useNavigate();
 
   const [userNotes, setUserNotes] = useState();
 
@@ -46,6 +50,8 @@ export default function NoteCard(props) {
     setStoreNoteDeleted(true);
 
     getNotes();
+
+    navigate("/notes");
   };
 
   const archiveNote = async (id) => {
@@ -75,10 +81,6 @@ export default function NoteCard(props) {
   useEffect(() => {
     getNotes();
   }, []);
-
-  useEffect(() => {
-    getNotes();
-  }, [storeNoteDeleted]);
 
   useEffect(() => {
     getNotes();
